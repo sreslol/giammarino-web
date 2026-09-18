@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giammarino Paving &amp; Sealcoating | Driveway Paving &amp; Sealcoating</title>
+    <meta name="description" content="Local asphalt paving, sealcoating, crack filling, line striping, and patching. Free estimates. Serving the Northeast — demo draft site.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Giammarino Paving &amp; Sealcoating">
+    <meta property="og:description" content="Professional asphalt paving, sealcoating, and driveway repair. Free estimates. Local Northeast contractor — demo draft.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sreslol.github.io/giammarino-web/">
+    <meta property="og:image" content="https://sreslol.github.io/giammarino-web/assets/photos/hero-wooded-driveway.jpg">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛣️</text></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        asphalt: {
+                            950: '#0a0a0b',
+                            900: '#121214',
+                            800: '#1c1c1f',
+                            700: '#2a2a2e',
+                            600: '#3f3f46',
+                        },
+                        amber: {
+                            accent: '#f59e0b',
+                            hot: '#ea580c',
+                            soft: '#fbbf24',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Oswald', 'Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #f59e0b;
+            transition: width 0.2s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .hero-overlay {
+            background:
+                linear-gradient(135deg, rgba(10,10,11,0.92) 0%, rgba(28,28,31,0.78) 45%, rgba(234,88,12,0.35) 100%),
+                url('assets/photos/hero-wooded-driveway.jpg') center/cover no-repeat;
+        }
+        /* Keep tiny FB thumbs from looking stretched as huge banners */
+        .thumb-safe {
+            image-rendering: auto;
+            background-color: #1c1c1f;
+        }
+        .tap { min-height: 44px; min-width: 44px; }
+    </style>
+</head>
+<body class="font-sans antialiased text-zinc-100 bg-asphalt-950">
+
+    <!-- Sticky Nav -->
+    <nav class="bg-asphalt-900/95 backdrop-blur border-b border-asphalt-700 sticky top-0 z-50" aria-label="Primary">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16 sm:h-[4.25rem]">
+                <a href="#home" class="flex items-center gap-2.5 min-w-0">
+                    <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-amber-hot flex items-center justify-center text-white shadow-lg shadow-orange-900/40" aria-hidden="true">
+                        <i class="fa-solid fa-road text-lg"></i>
+                    </span>
+                    <span class="min-w-0">
+                        <span class="block font-display text-base sm:text-lg tracking-wide text-white leading-tight truncate">Giammarino</span>
+                        <span class="block text-[10px] sm:text-xs text-amber-soft -mt-0.5 tracking-wide uppercase">Paving &amp; Sealcoating</span>
+                    </span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-x-6 text-sm font-medium">
+                    <a href="#services" class="nav-link text-zinc-300 hover:text-white">Services</a>
+                    <a href="#areas" class="nav-link text-zinc-300 hover:text-white">Areas</a>
+                    <a href="#gallery" class="nav-link text-zinc-300 hover:text-white">Gallery</a>
+                    <a href="#trust" class="nav-link text-zinc-300 hover:text-white">Why Us</a>
+                    <a href="#contact" class="nav-link text-zinc-300 hover:text-white">Contact</a>
+                    <a href="tel:+15555550142" class="tap inline-flex items-center gap-2 px-4 py-2.5 bg-amber-hot hover:bg-orange-600 text-white text-sm font-semibold rounded-lg transition">
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        <span>(555) 555-0142</span>
+                    </a>
+                </div>
+
+                <button type="button" onclick="toggleMobileMenu()" class="md:hidden tap w-11 h-11 flex items-center justify-center text-2xl text-amber-soft rounded-lg hover:bg-asphalt-700" aria-controls="mobile-menu" aria-expanded="false" id="menu-btn" aria-label="Open menu">
+                    <i id="menu-icon" class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-asphalt-700 bg-asphalt-900 px-4 py-4" role="navigation" aria-label="Mobile">
+            <div class="flex flex-col gap-1 text-base font-medium">
+                <a href="#services" onclick="toggleMobileMenu()" class="tap flex items-center py-3 px-2 rounded-lg hover:bg-asphalt-700">Services</a>
+                <a href="#areas" onclick="toggleMobileMenu()" class="tap flex items-center py-3 px-2 rounded-lg hover:bg-asphalt-700">Areas Served</a>
+                <a href="#gallery" onclick="toggleMobileMenu()" class="tap flex items-center py-3 px-2 rounded-lg hover:bg-asphalt-700">Gallery</a>
+                <a href="#trust" onclick="toggleMobileMenu()" class="tap flex items-center py-3 px-2 rounded-lg hover:bg-asphalt-700">Why Us</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="tap flex items-center py-3 px-2 rounded-lg hover:bg-asphalt-700">Contact</a>
+                <a href="tel:+15555550142" class="tap mt-3 flex items-center justify-center gap-2 py-3.5 bg-amber-hot hover:bg-orange-600 text-white font-semibold rounded-lg">
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i> Call (555) 555-0142
+                </a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="tap flex items-center justify-center gap-2 py-3.5 border border-amber-accent text-amber-soft font-semibold rounded-lg">
+                    Get a Free Estimate
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="home" class="hero-overlay relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-28">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                <div class="space-y-6 sm:space-y-8">
+                    <p class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-accent/15 border border-amber-accent/40 text-amber-soft text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400" aria-hidden="true"></span>
+                        Local · Licensed · Insured
+                    </p>
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-wide text-white">
+                        Driveways that look sharp and last season after season
+                    </h1>
+                    <p class="text-base sm:text-lg text-zinc-300 max-w-xl leading-relaxed">
+                        Giammarino Paving &amp; Sealcoating delivers asphalt paving, sealcoating, crack filling, line striping, and patching for homes and small commercial lots across the Northeast.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <a href="#contact" class="tap inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-amber-hot hover:bg-orange-600 text-white font-semibold rounded-lg text-center shadow-lg shadow-orange-950/40 transition">
+                            <i class="fa-solid fa-clipboard-list" aria-hidden="true"></i>
+                            Get a Free Estimate
+                        </a>
+                        <a href="tel:+15555550142" class="tap inline-flex items-center justify-center gap-2 px-6 py-3.5 border-2 border-white/80 hover:bg-white hover:text-asphalt-900 text-white font-semibold rounded-lg text-center transition">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            Call (555) 555-0142
+                        </a>
+                    </div>
+                    <ul class="flex flex-wrap gap-x-6 gap-y-3 pt-2 text-sm text-zinc-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-accent" aria-hidden="true"></i> Free same-day estimates</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-accent" aria-hidden="true"></i> Residential &amp; light commercial</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-accent" aria-hidden="true"></i> Clean job sites</li>
+                    </ul>
+                </div>
+
+                <div class="relative max-w-md mx-auto lg:max-w-none w-full">
+                    <div class="rounded-2xl overflow-hidden border border-asphalt-600 shadow-2xl shadow-black/50 aspect-square sm:aspect-[4/3] lg:aspect-square bg-asphalt-800">
+                        <img
+                            src="assets/photos/hero-wooded-driveway.jpg"
+                            alt="Long freshly sealed asphalt driveway through wooded property"
+                            width="206"
+                            height="206"
+                            class="w-full h-full object-cover thumb-safe"
+                            decoding="async"
+                        >
+                    </div>
+                    <div class="absolute -bottom-4 left-4 right-4 sm:left-auto sm:right-auto sm:-bottom-5 sm:-left-4 bg-asphalt-800 border border-asphalt-600 rounded-xl px-4 py-3 shadow-xl max-w-[16rem]">
+                        <p class="text-xs text-zinc-400 uppercase tracking-wider">Featured project</p>
+                        <p class="font-semibold text-sm sm:text-base text-white">Wooded residential driveway</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services" class="py-16 sm:py-20 bg-asphalt-900 scroll-mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+                <p class="text-amber-soft text-sm font-semibold uppercase tracking-widest mb-2">What we do</p>
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide">Full-service asphalt care</h2>
+                <p class="mt-4 text-zinc-400 text-base sm:text-lg">From new pavement to seasonal sealcoating — built for Northeast weather.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <article class="bg-asphalt-800 border border-asphalt-700 rounded-2xl p-6 sm:p-7 hover:border-amber-accent/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-hot/20 text-amber-soft flex items-center justify-center text-xl mb-4" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3 class="font-display text-xl font-semibold text-white tracking-wide mb-2">Asphalt Paving</h3>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">New driveways, extensions, and resurfacing with proper prep for a smooth, durable finish.</p>
+                </article>
+                <article class="bg-asphalt-800 border border-asphalt-700 rounded-2xl p-6 sm:p-7 hover:border-amber-accent/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-hot/20 text-amber-soft flex items-center justify-center text-xl mb-4" aria-hidden="true"><i class="fa-solid fa-brush"></i></div>
+                    <h3 class="font-display text-xl font-semibold text-white tracking-wide mb-2">Sealcoating</h3>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Protect asphalt from UV, salt, and water. Deep black finish that boosts curb appeal.</p>
+                </article>
+                <article class="bg-asphalt-800 border border-asphalt-700 rounded-2xl p-6 sm:p-7 hover:border-amber-accent/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-hot/20 text-amber-soft flex items-center justify-center text-xl mb-4" aria-hidden="true"><i class="fa-solid fa-wrench"></i></div>
+                    <h3 class="font-display text-xl font-semibold text-white tracking-wide mb-2">Crack Filling</h3>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Hot-applied sealant to stop cracks from spreading before they turn into expensive repairs.</p>
+                </article>
+                <article class="bg-asphalt-800 border border-asphalt-700 rounded-2xl p-6 sm:p-7 hover:border-amber-accent/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-hot/20 text-amber-soft flex items-center justify-center text-xl mb-4" aria-hidden="true"><i class="fa-solid fa-grip-lines"></i></div>
+                    <h3 class="font-display text-xl font-semibold text-white tracking-wide mb-2">Line Striping</h3>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Parking lots, handicap spaces, and directional markings — crisp and high-visibility.</p>
+                </article>
+                <article class="bg-asphalt-800 border border-asphalt-700 rounded-2xl p-6 sm:p-7 hover:border-amber-accent/50 transition sm:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 rounded-xl bg-amber-hot/20 text-amber-soft flex items-center justify-center text-xl mb-4" aria-hidden="true"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3 class="font-display text-xl font-semibold text-white tracking-wide mb-2">Patching &amp; Repair</h3>
+                    <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">Potholes, edge breaks, and localized failures fixed so your pavement stays safe and usable.</p>
+                </article>
+            </div>
+
+            <!-- Process / equipment callout -->
+            <div class="mt-10 sm:mt-14 grid md:grid-cols-2 gap-6 items-center bg-asphalt-800/60 border border-asphalt-700 rounded-2xl overflow-hidden">
+                <div class="aspect-[4/3] md:aspect-auto md:h-full min-h-[12rem] bg-asphalt-800">
+                    <img src="assets/photos/crack-filling-in-progress.jpg" alt="Crew applying crack filler on asphalt" width="206" height="206" class="w-full h-full object-cover thumb-safe" loading="lazy" decoding="async">
+                </div>
+                <div class="p-6 sm:p-8 lg:p-10">
+                    <h3 class="font-display text-2xl sm:text-3xl font-semibold text-white tracking-wide mb-3">Done right the first time</h3>
+                    <p class="text-zinc-400 leading-relaxed mb-5">We prep the surface, treat cracks, apply material evenly, and leave the site clean with clear curing guidance — so your driveway cures properly and lasts.</p>
+                    <ul class="space-y-2 text-sm sm:text-base text-zinc-300">
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-amber-accent mt-1" aria-hidden="true"></i> Surface cleaning &amp; oil-spot prep</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-amber-accent mt-1" aria-hidden="true"></i> Professional-grade materials</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-amber-accent mt-1" aria-hidden="true"></i> Caution tape / cones while curing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas -->
+    <section id="areas" class="py-16 sm:py-20 bg-asphalt-950 scroll-mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-10 items-start">
+                <div>
+                    <p class="text-amber-soft text-sm font-semibold uppercase tracking-widest mb-2">Service area</p>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-wide mb-4">Northeast driveway specialists</h2>
+                    <p class="text-zinc-400 leading-relaxed mb-4">
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-amber-soft bg-amber-accent/10 border border-amber-accent/30 px-2 py-1 rounded mb-3">Demo area</span><br>
+                        This draft site uses a believable Upstate New York / Southern Tier footprint for layout and copy. Final towns and radius will be confirmed before launch.
+                    </p>
+                    <p class="text-zinc-400 leading-relaxed">Typical jobs: residential driveways, HOA lanes, church &amp; small business lots within roughly a 45-minute drive of the Binghamton–Elmira corridor.</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <div class="bg-asphalt-800 border border-asphalt-700 rounded-xl px-4 py-3.5 text-sm sm:text-base font-medium text-center">Binghamton</div>
+                    <div class="bg-asphalt-800 border border-asphalt-700 rounded-xl px-4 py-3.5 text-sm sm:text-base font-medium text-center">Vestal</div>
+                    <div class="bg-asphalt-800 border border-asphalt-700 rounded-xl px-4 py-3.5 text-sm sm:text-base font-medium text-center">Endicott</div>
+                    <div class="bg-asphalt-800 border border-asphalt-700 rounded-xl px-4 py-3.5 text-sm sm:text-base font-medium text-center">Johnson City</div>
+                    <div class="bg-asphalt-800 border border-asphalt-700 rounded-xl px-4 py-3.5 text-sm sm:text-base font-medium text-center">Owego</div>
+                    <div class="bg-asphalt-800 border border-asphalt-700 rounded-xl px-4 py-3.5 text-sm sm:text-base font-medium text-center">Elmira</div>
+                    <div class="bg-asphalt-800 border border-asphalt-700 rounded-xl px-4 py-3.5 text-sm sm:text-base font-medium text-center">Corning</div>
+                    <div class="bg-asphalt-800 border border-asphalt-700 rounded-xl px-4 py-3.5 text-sm sm:text-base font-medium text-center">Ithaca</div>
+                    <div class="bg-asphalt-800 border border-asphalt-700 rounded-xl px-4 py-3.5 text-sm sm:text-base font-medium text-center col-span-2 sm:col-span-1">Surrounding towns</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-16 sm:py-20 bg-asphalt-900 scroll-mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+                <p class="text-amber-soft text-sm font-semibold uppercase tracking-widest mb-2">Our work</p>
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wide">Recent projects</h2>
+                <p class="mt-4 text-zinc-400 text-sm sm:text-base">Photos from past sealcoating and paving jobs. Source images are social-media exports (~206×206); shown in constrained cards so they stay sharp on phone and desktop.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/house-long-driveway.jpg" alt="Large home with long fresh asphalt driveway" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">Long residential driveway</figcaption>
+                </figure>
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/before-after-garage.jpg" alt="Before and after driveway sealcoating comparison" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">Before &amp; after sealcoat</figcaption>
+                </figure>
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/driveway-sealed-caution.jpg" alt="Freshly sealed driveway with yellow caution tape" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">Curing with caution tape</figcaption>
+                </figure>
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/winding-wooded-driveway-crew.jpg" alt="Winding wooded driveway with crew on site" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">Wooded driveway job</figcaption>
+                </figure>
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/sealed-driveway-brick-garage.jpg" alt="Sealed driveway in front of brick garage" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">Brick garage finish</figcaption>
+                </figure>
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/sealed-driveway-white-house.jpg" alt="Sealed driveway at white two-story house" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">White house sealcoat</figcaption>
+                </figure>
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/driveway-two-car-garage.jpg" alt="Sealed driveway leading to two-car garage" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">Two-car garage driveway</figcaption>
+                </figure>
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/sealed-driveway-cones.jpg" alt="Fresh sealcoat marked off with traffic cones" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">Protected while curing</figcaption>
+                </figure>
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/sealed-driveway-brick-house.jpg" alt="Sealed driveway at brick house with detached garage" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">House &amp; garage lot</figcaption>
+                </figure>
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/side-driveway-narrow.jpg" alt="Narrow side driveway freshly sealed beside house" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">Tight side driveway</figcaption>
+                </figure>
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/equipment-sealcoat-trailer.jpg" alt="Yellow sealcoating trailer and hose reel at job site" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">Equipment on site</figcaption>
+                </figure>
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/crack-filling-in-progress.jpg" alt="Crack filling machine in use on driveway" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">Crack filling in progress</figcaption>
+                </figure>
+                <figure class="group relative rounded-xl overflow-hidden border border-asphalt-700 bg-asphalt-800 aspect-square">
+                    <img src="assets/photos/promo-free-estimate.jpg" alt="Freshly sealed driveway promotional photo" width="206" height="206" class="w-full h-full object-cover thumb-safe group-hover:scale-105 transition duration-300" loading="lazy" decoding="async">
+                    <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2.5 sm:p-3 text-[11px] sm:text-xs text-zinc-200">Free estimate promo shot</figcaption>
+                </figure>
+            </div>
+            <p class="mt-6 text-center text-xs sm:text-sm text-zinc-500">Equipment photo may show third-party machine branding — used for process illustration only. Demo site is Giammarino Paving &amp; Sealcoating.</p>
+        </div>
+    </section>
+
+    <!-- Trust -->
+    <section id="trust" class="py-16 sm:py-20 bg-asphalt-950 scroll-mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+                <p class="text-amber-soft text-sm font-semibold uppercase tracking-widest mb-2">Peace of mind</p>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-wide">Licensed, insured, straightforward</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
+                <div class="bg-asphalt-900 border border-asphalt-700 rounded-2xl p-6 text-center">
+                    <i class="fa-solid fa-id-card text-3xl text-amber-soft mb-3" aria-hidden="true"></i>
+                    <h3 class="font-semibold text-white mb-1">Licensed contractor</h3>
+                    <p class="text-sm text-zinc-400">Fully licensed for paving &amp; sealcoating work in our service area. <span class="text-zinc-500">(Demo callout — confirm details at launch.)</span></p>
+                </div>
+                <div class="bg-asphalt-900 border border-asphalt-700 rounded-2xl p-6 text-center">
+                    <i class="fa-solid fa-shield-halved text-3xl text-amber-soft mb-3" aria-hidden="true"></i>
+                    <h3 class="font-semibold text-white mb-1">Insured</h3>
+                    <p class="text-sm text-zinc-400">General liability coverage for residential and light commercial jobs. Certificates available on request.</p>
+                </div>
+                <div class="bg-asphalt-900 border border-asphalt-700 rounded-2xl p-6 text-center">
+                    <i class="fa-solid fa-handshake text-3xl text-amber-soft mb-3" aria-hidden="true"></i>
+                    <h3 class="font-semibold text-white mb-1">Clear estimates</h3>
+                    <p class="text-sm text-zinc-400">Written scope and pricing before we start — no surprise add-ons after the truck rolls up.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-display text-2xl font-semibold text-white tracking-wide text-center mb-2">What neighbors say</h3>
+                <p class="text-center text-xs text-zinc-500 mb-8 uppercase tracking-wider">Fictional demo testimonials — not attributed to real people</p>
+                <div class="grid md:grid-cols-3 gap-4 sm:gap-6">
+                    <blockquote class="bg-asphalt-900 border border-asphalt-700 rounded-2xl p-6">
+                        <div class="text-amber-soft mb-3" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">“They sealed our long driveway in one day. Showed up on time, cleaned the edges, and left caution tape so nobody drove on it early.”</p>
+                        <footer class="text-sm text-zinc-500">— Demo Homeowner, Vestal</footer>
+                    </blockquote>
+                    <blockquote class="bg-asphalt-900 border border-asphalt-700 rounded-2xl p-6">
+                        <div class="text-amber-soft mb-3" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">“Crack fill first, then sealcoat — the faded gray looked brand new. Fair price and no hard sell.”</p>
+                        <footer class="text-sm text-zinc-500">— Demo Customer, Endicott</footer>
+                    </blockquote>
+                    <blockquote class="bg-asphalt-900 border border-asphalt-700 rounded-2xl p-6">
+                        <div class="text-amber-soft mb-3" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">“Needed a patch on the church lot before winter. Quick turnaround and the stripe lines look sharp.”</p>
+                        <footer class="text-sm text-zinc-500">— Demo Property Manager, Binghamton</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 sm:py-20 bg-asphalt-900 scroll-mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14">
+                <div>
+                    <p class="text-amber-soft text-sm font-semibold uppercase tracking-widest mb-2">Get started</p>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-wide mb-4">Request a free estimate</h2>
+                    <p class="text-zinc-400 leading-relaxed mb-8">Tell us about your driveway or lot. This is a demo form UI — it does not submit to a backend. Use call or email placeholders below.</p>
+
+                    <div class="space-y-5">
+                        <a href="tel:+15555550142" class="tap flex items-center gap-4 p-4 rounded-xl bg-asphalt-800 border border-asphalt-700 hover:border-amber-accent/50 transition">
+                            <span class="w-12 h-12 flex-shrink-0 rounded-xl bg-amber-hot/20 text-amber-soft flex items-center justify-center text-xl" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
+                            <span>
+                                <span class="block font-semibold text-white text-lg">(555) 555-0142</span>
+                                <span class="block text-sm text-zinc-400">Demo phone — replace at launch</span>
+                            </span>
+                        </a>
+                        <a href="mailto:hello@giammarino-demo.example" class="tap flex items-center gap-4 p-4 rounded-xl bg-asphalt-800 border border-asphalt-700 hover:border-amber-accent/50 transition">
+                            <span class="w-12 h-12 flex-shrink-0 rounded-xl bg-amber-hot/20 text-amber-soft flex items-center justify-center text-xl" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+                            <span>
+                                <span class="block font-semibold text-white break-all">hello@giammarino-demo.example</span>
+                                <span class="block text-sm text-zinc-400">Demo email — replace at launch</span>
+                            </span>
+                        </a>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-asphalt-800 border border-asphalt-700">
+                            <span class="w-12 h-12 flex-shrink-0 rounded-xl bg-amber-hot/20 text-amber-soft flex items-center justify-center text-xl" aria-hidden="true"><i class="fa-solid fa-clock"></i></span>
+                            <div>
+                                <p class="font-semibold text-white">Seasonal hours</p>
+                                <p class="text-sm text-zinc-400 mt-1">Mon–Sat · Weather permitting<br>Best sealing weather: late spring through early fall</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form onsubmit="event.preventDefault(); document.getElementById('form-note').classList.remove('hidden');" class="bg-asphalt-800 border border-asphalt-700 rounded-2xl p-5 sm:p-8 space-y-4" aria-label="Estimate request (demo)">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-zinc-300 mb-1.5">Name</label>
+                            <input id="name" name="name" type="text" required autocomplete="name" class="tap w-full px-4 py-3 rounded-lg bg-asphalt-950 border border-asphalt-600 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-accent focus:border-transparent" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-zinc-300 mb-1.5">Phone</label>
+                            <input id="phone" name="phone" type="tel" autocomplete="tel" class="tap w-full px-4 py-3 rounded-lg bg-asphalt-950 border border-asphalt-600 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-accent focus:border-transparent" placeholder="(555) 000-0000">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-zinc-300 mb-1.5">Email</label>
+                        <input id="email" name="email" type="email" required autocomplete="email" class="tap w-full px-4 py-3 rounded-lg bg-asphalt-950 border border-asphalt-600 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-accent focus:border-transparent" placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-zinc-300 mb-1.5">Service needed</label>
+                        <select id="service" name="service" class="tap w-full px-4 py-3 rounded-lg bg-asphalt-950 border border-asphalt-600 text-white focus:outline-none focus:ring-2 focus:ring-amber-accent focus:border-transparent">
+                            <option>Sealcoating</option>
+                            <option>Asphalt paving</option>
+                            <option>Crack filling</option>
+                            <option>Line striping</option>
+                            <option>Patching / repair</option>
+                            <option>Not sure — need advice</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-zinc-300 mb-1.5">Project details</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-asphalt-950 border border-asphalt-600 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-accent focus:border-transparent resize-y min-h-[7rem]" placeholder="Approx. driveway size, address/town, timeline…"></textarea>
+                    </div>
+                    <button type="submit" class="tap w-full py-3.5 bg-amber-hot hover:bg-orange-600 text-white font-semibold rounded-lg text-base transition">
+                        Send estimate request
+                    </button>
+                    <p id="form-note" class="hidden text-center text-sm text-amber-soft" role="status">Demo only — this form does not send data. Please call or email when live contact info is set.</p>
+                    <p class="text-center text-xs text-zinc-500">No backend on this draft. Wire Formspree or similar before public launch.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-asphalt-950 border-t border-asphalt-800 py-10 sm:py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 text-center sm:text-left">
+                <div class="flex items-center justify-center sm:justify-start gap-3">
+                    <span class="w-10 h-10 rounded-lg bg-amber-hot flex items-center justify-center text-white" aria-hidden="true"><i class="fa-solid fa-road"></i></span>
+                    <div>
+                        <p class="font-display text-lg tracking-wide text-white">Giammarino Paving &amp; Sealcoating</p>
+                        <p class="text-xs text-zinc-500">Draft marketing site · Demo contact info</p>
+                    </div>
+                </div>
+                <div class="text-sm text-zinc-400">
+                    <a href="tel:+15555550142" class="hover:text-amber-soft">(555) 555-0142</a>
+                    <span class="mx-2 text-asphalt-600" aria-hidden="true">·</span>
+                    <a href="mailto:hello@giammarino-demo.example" class="hover:text-amber-soft break-all">hello@giammarino-demo.example</a>
+                </div>
+            </div>
+            <p class="mt-8 text-center text-xs text-zinc-600">© 2026 Giammarino Paving &amp; Sealcoating · Static draft on GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const btn = document.getElementById('menu-btn');
+            const open = menu.classList.contains('hidden');
+            if (open) {
+                menu.classList.remove('hidden');
+                icon.classList.replace('fa-bars', 'fa-xmark');
+                btn.setAttribute('aria-expanded', 'true');
+                btn.setAttribute('aria-label', 'Close menu');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.replace('fa-xmark', 'fa-bars');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Open menu');
+            }
+        }
+    </script>
+</body>
+</html>
