@@ -63,9 +63,15 @@
     <nav class="site-nav sticky top-0 z-50" aria-label="Primary">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center h-16 sm:h-[4.25rem]">
-                <a href="#home" class="min-w-0">
-                    <span class="wordmark block text-xl sm:text-2xl text-white truncate">Giammarino</span>
-                    <span class="wordmark-sub block">Paving &amp; Sealcoating</span>
+                <!-- Client logo drops in here: replace .logo-slot contents with <img src="..." alt="Giammarino"> -->
+                <a href="#home" class="logo-slot min-w-0" title="Client logo goes here">
+                    <span class="logo-frame" aria-hidden="true">
+                        <span class="logo-frame-label">LOGO</span>
+                    </span>
+                    <span class="logo-text min-w-0">
+                        <span class="wordmark block text-xl sm:text-2xl text-white truncate">Giammarino</span>
+                        <span class="wordmark-sub block">Paving &amp; Sealcoating</span>
+                    </span>
                 </a>
 
                 <div class="hidden md:flex items-center gap-x-7">
@@ -197,23 +203,21 @@
                 <div>
                     <p class="section-label mb-3"><span>02 /</span> Areas</p>
                     <span class="accent-bar mb-4" aria-hidden="true"></span>
-                    <h2 class="font-display text-4xl sm:text-5xl font-bold text-white tracking-wide uppercase mb-4">Northeast driveway specialists</h2>
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold text-white tracking-wide uppercase mb-4">Southern Tier driveway specialists</h2>
                     <p class="text-zinc-400 leading-relaxed mb-4">
-                        <span class="inline-block font-display text-xs font-semibold uppercase tracking-widest text-amber-soft border border-amber-accent/50 px-2 py-1 mb-3">Service footprint</span><br>
-                        Based in the Binghamton–Elmira corridor (607). Town list below is the working draft radius — confirm final coverage before launch.
+                        <span class="inline-block font-display text-xs font-semibold uppercase tracking-widest text-amber-soft border border-amber-accent/50 px-2 py-1 mb-3">Primary service area</span><br>
+                        Based in the Binghamton metro (Broome County and nearby). The towns below are our primary coverage — not exclusive. Outside that radius? Call and ask; we take jobs across the Southern Tier when the schedule fits.
                     </p>
-                    <p class="text-zinc-400 leading-relaxed">Typical jobs: residential driveways, HOA lanes, church &amp; small business lots within roughly a 45-minute drive.</p>
+                    <p class="text-zinc-400 leading-relaxed">Typical jobs: residential driveways, HOA lanes, church &amp; small business lots around Binghamton, Vestal, Endicott, Johnson City, Endwell, Owego, and surrounding Southern Tier communities.</p>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
                     <div class="town-chip">Binghamton</div>
                     <div class="town-chip">Vestal</div>
                     <div class="town-chip">Endicott</div>
                     <div class="town-chip">Johnson City</div>
+                    <div class="town-chip">Endwell</div>
                     <div class="town-chip">Owego</div>
-                    <div class="town-chip">Elmira</div>
-                    <div class="town-chip">Corning</div>
-                    <div class="town-chip">Ithaca</div>
-                    <div class="town-chip col-span-2 sm:col-span-1">+ Nearby</div>
+                    <div class="town-chip col-span-2 sm:col-span-3">+ Surrounding Southern Tier</div>
                 </div>
             </div>
         </div>
@@ -307,10 +311,6 @@
                     <figcaption>Open garage finish</figcaption>
                 </figure>
                 <figure>
-                    <img src="assets/photos/driveway-promo-estimate.jpg" alt="Sealed side driveway with free estimate promo overlay" width="510" height="960" loading="lazy" decoding="async">
-                    <figcaption>Estimate promo shot</figcaption>
-                </figure>
-                <figure>
                     <img src="assets/photos/sealed-driveway-brick-garage.jpg" alt="Wide sealed driveway to red brick garage with caution tape" width="960" height="720" loading="lazy" decoding="async">
                     <figcaption>Brick garage · wide</figcaption>
                 </figure>
@@ -336,7 +336,7 @@
                 <div class="trust-tile">
                     <p class="font-display text-amber-soft text-sm tracking-widest mb-2">LICENSE</p>
                     <h3 class="font-display text-xl font-semibold text-white uppercase mb-2">Licensed contractor</h3>
-                    <p class="text-sm text-zinc-400">Fully licensed for paving &amp; sealcoating in our service area. <span class="text-zinc-500">(Confirm details at launch.)</span></p>
+                    <p class="text-sm text-zinc-400">Fully licensed for paving &amp; sealcoating in our service area.</p>
                 </div>
                 <div class="trust-tile">
                     <p class="font-display text-amber-soft text-sm tracking-widest mb-2">COVERED</p>
@@ -352,22 +352,22 @@
 
             <div>
                 <h3 class="font-display text-2xl sm:text-3xl font-bold text-white tracking-wide uppercase mb-2">What neighbors say</h3>
-                <p class="text-xs text-zinc-500 mb-8 uppercase tracking-widest font-display">Demo testimonials — not attributed to real people</p>
+                <p class="text-xs text-zinc-500 mb-8 uppercase tracking-widest font-display">From Facebook reviews</p>
                 <div class="grid md:grid-cols-3 gap-4">
                     <blockquote class="quote-card">
                         <div class="text-amber-soft mb-3 text-sm tracking-widest font-display" aria-hidden="true">★★★★★</div>
-                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">“They sealed our long driveway in one day. Showed up on time, cleaned the edges, and left caution tape so nobody drove on it early.”</p>
-                        <footer class="text-sm text-zinc-500 font-display uppercase tracking-wider">— Demo Homeowner, Vestal</footer>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">“Our driveway looks great! I would recommend you to anyone! Thank you again!”</p>
+                        <footer class="text-sm text-zinc-500 font-display uppercase tracking-wider">— Facebook review</footer>
                     </blockquote>
                     <blockquote class="quote-card">
                         <div class="text-amber-soft mb-3 text-sm tracking-widest font-display" aria-hidden="true">★★★★★</div>
-                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">“Crack fill first, then sealcoat — the faded gray looked brand new. Fair price and no hard sell.”</p>
-                        <footer class="text-sm text-zinc-500 font-display uppercase tracking-wider">— Demo Customer, Endicott</footer>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">“Massimo did a great job of seal coating my driveway. Looks like new. He is on time and professional. Highly recommend his company.”</p>
+                        <footer class="text-sm text-zinc-500 font-display uppercase tracking-wider">— Facebook review</footer>
                     </blockquote>
                     <blockquote class="quote-card">
                         <div class="text-amber-soft mb-3 text-sm tracking-widest font-display" aria-hidden="true">★★★★★</div>
-                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">“Needed a patch on the church lot before winter. Quick turnaround and the stripe lines look sharp.”</p>
-                        <footer class="text-sm text-zinc-500 font-display uppercase tracking-wider">— Demo Property Manager, Binghamton</footer>
+                        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">“My driveway looks like new. Great job. On time and professional. Thank you.”</p>
+                        <footer class="text-sm text-zinc-500 font-display uppercase tracking-wider">— Facebook review</footer>
                     </blockquote>
                 </div>
             </div>
@@ -382,23 +382,23 @@
                     <p class="section-label mb-3"><span>05 /</span> Contact</p>
                     <span class="accent-bar mb-4" aria-hidden="true"></span>
                     <h2 class="font-display text-4xl sm:text-5xl font-bold text-white tracking-wide uppercase mb-4">Request a free estimate</h2>
-                    <p class="text-zinc-400 leading-relaxed mb-8">Tell us about your driveway or lot. Form is demo UI only — call or text the number from our equipment for the fastest reply.</p>
+                    <p class="text-zinc-400 leading-relaxed mb-8">Tell us about your driveway or lot. Call or text for the fastest reply — same number on our trucks and job sites.</p>
 
                     <div class="space-y-3">
                         <a href="tel:+16072428176" class="tap flex items-center gap-4 p-4 contact-panel hover:border-amber-accent transition border">
                             <span class="w-11 h-11 flex-shrink-0 bg-amber-hot text-white flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
                             <span>
                                 <span class="block font-display text-xl font-bold text-white tracking-wide">(607) 242-8176</span>
-                                <span class="block text-sm text-zinc-400">From trailer &amp; job-site promo photos</span>
+                                <span class="block text-sm text-zinc-400">Call or text for estimates</span>
                             </span>
                         </a>
-                        <a href="mailto:hello@giammarino-demo.example" class="tap flex items-center gap-4 p-4 contact-panel hover:border-amber-accent transition border">
-                            <span class="w-11 h-11 flex-shrink-0 border border-amber-accent text-amber-soft flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+                        <div class="flex items-center gap-4 p-4 contact-panel border">
+                            <span class="w-11 h-11 flex-shrink-0 border border-amber-accent text-amber-soft flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-message"></i></span>
                             <span>
-                                <span class="block font-semibold text-white break-all">hello@giammarino-demo.example</span>
-                                <span class="block text-sm text-zinc-400">Demo email — replace at launch</span>
+                                <span class="block font-semibold text-white">Call or text for estimates</span>
+                                <span class="block text-sm text-zinc-400">Email pending — use the phone number for now</span>
                             </span>
-                        </a>
+                        </div>
                         <div class="flex items-start gap-4 p-4 contact-panel border">
                             <span class="w-11 h-11 flex-shrink-0 border border-asphalt-600 text-zinc-300 flex items-center justify-center text-lg" aria-hidden="true"><i class="fa-solid fa-clock"></i></span>
                             <div>
@@ -409,7 +409,7 @@
                     </div>
                 </div>
 
-                <form onsubmit="event.preventDefault(); document.getElementById('form-note').classList.remove('hidden');" class="contact-panel border p-5 sm:p-8 space-y-4" aria-label="Estimate request (demo)">
+                <form onsubmit="event.preventDefault(); document.getElementById('form-note').classList.remove('hidden');" class="contact-panel border p-5 sm:p-8 space-y-4" aria-label="Estimate request">
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
                             <label for="name" class="block text-xs font-display uppercase tracking-widest text-zinc-400 mb-1.5">Name</label>
@@ -417,7 +417,7 @@
                         </div>
                         <div>
                             <label for="phone" class="block text-xs font-display uppercase tracking-widest text-zinc-400 mb-1.5">Phone</label>
-                            <input id="phone" name="phone" type="tel" autocomplete="tel" class="field tap" placeholder="(607) 000-0000">
+                            <input id="phone" name="phone" type="tel" autocomplete="tel" class="field tap" placeholder="(607) 242-8176">
                         </div>
                     </div>
                     <div>
@@ -442,8 +442,8 @@
                     <button type="submit" class="btn btn-primary tap w-full">
                         Send estimate request
                     </button>
-                    <p id="form-note" class="hidden text-center text-sm text-amber-soft" role="status">Demo only — this form does not send data. Please call (607) 242-8176.</p>
-                    <p class="text-center text-xs text-zinc-500">No backend on this draft. Wire Formspree or similar before public launch.</p>
+                    <p id="form-note" class="hidden text-center text-sm text-amber-soft" role="status">Thanks — for the fastest reply, please call or text (607) 242-8176. This form is not wired to email yet.</p>
+                    <p class="text-center text-xs text-zinc-500">Prefer phone? Call or text (607) 242-8176 anytime during the season.</p>
                 </form>
             </div>
         </div>
@@ -454,18 +454,23 @@
         <div class="accent-strip" aria-hidden="true"></div>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 text-center sm:text-left">
-                <div>
-                    <p class="wordmark text-2xl text-white">Giammarino</p>
-                    <p class="wordmark-sub">Paving &amp; Sealcoating</p>
-                    <p class="text-xs text-zinc-500 mt-2">Draft marketing site</p>
+                <div class="logo-slot justify-center sm:justify-start">
+                    <!-- Client logo drops in here (same slot as sticky nav) -->
+                    <span class="logo-frame" aria-hidden="true">
+                        <span class="logo-frame-label">LOGO</span>
+                    </span>
+                    <span class="logo-text text-left">
+                        <p class="wordmark text-2xl text-white">Giammarino</p>
+                        <p class="wordmark-sub">Paving &amp; Sealcoating</p>
+                    </span>
                 </div>
                 <div class="text-sm text-zinc-400 font-display uppercase tracking-wider">
                     <a href="tel:+16072428176" class="hover:text-amber-soft">(607) 242-8176</a>
                     <span class="mx-2 text-asphalt-600" aria-hidden="true">·</span>
-                    <a href="mailto:hello@giammarino-demo.example" class="hover:text-amber-soft break-all normal-case tracking-normal">hello@giammarino-demo.example</a>
+                    <span class="normal-case tracking-normal">Call or text for estimates</span>
                 </div>
             </div>
-            <p class="mt-8 text-center text-xs text-zinc-600">© 2026 Giammarino Paving &amp; Sealcoating · Static draft on GitHub Pages</p>
+            <p class="mt-8 text-center text-xs text-zinc-600">© 2026 Giammarino Paving &amp; Sealcoating · Binghamton &amp; Southern Tier NY</p>
         </div>
     </footer>
 

@@ -1,6 +1,6 @@
 # Giammarino Paving & Sealcoating — Marketing Site
 
-Draft static brochure site for **Giammarino Paving & Sealcoating**.
+Static brochure site for **Giammarino Paving & Sealcoating** (asphalt paving, sealcoating, crack filling, line striping, patching).
 
 **Live (GitHub Pages):** https://sreslol.github.io/giammarino-web/
 
@@ -24,11 +24,15 @@ python3 -m http.server 8080
 
 Then visit http://localhost:8080
 
+## Logo slot
+
+Sticky nav and footer include a dashed amber **LOGO** frame next to the GIAMMARINO wordmark. **Client logo drops in here** — replace the `.logo-frame` / wordmark block with an `<img>` (or SVG) when artwork is ready. Keep alt text like `Giammarino Paving & Sealcoating`.
+
 ## Photos
 
-Job-site JPGs live under `assets/photos/` with simple kebab-case names (Facebook export filenames removed). Old ~206×206 thumbs deleted. Highest-res asset: `equipment-giammarino-trailer.jpg` (branded trailer). Hero uses the wide `sealed-driveway-brick-garage.jpg`. Phone **(607) 242-8176** taken from trailer / promo lettering on photos.
+Job-site JPGs live under `assets/photos/` with simple kebab-case names. Highest-res asset: `equipment-giammarino-trailer.jpg` (branded trailer). Hero uses the wide `sealed-driveway-brick-garage.jpg`. Public phone **(607) 242-8176**.
 
-`driveway-promo-estimate.jpg` still has baked-in Facebook promo text overlays.
+Facebook promo overlay photo (`driveway-promo-estimate.jpg`) was removed from the gallery UI and deleted from the repo.
 
 ## Custom domain (CNAME + Cloudflare) — not set yet
 
@@ -54,6 +58,9 @@ Commit and push to `main`.
 
 After the custom domain is live, update `og:url` and `og:image` in `index.html`.
 
-## Demo content
+## Content notes
 
-Email and testimonials are still placeholders. Form does not submit. Equipment/process shots may show third-party machine brands (Ryno Worx, Wacker) — illustration only; site brand remains Giammarino.
+- Testimonials are real Facebook reviews (attributed lightly as “Facebook review”).
+- Primary service area: Binghamton metro / Broome + nearby Southern Tier (not exclusive).
+- Contact prefers call/text; email not published yet. Estimate form is UI-only until wired (e.g. Formspree).
+- Equipment/process shots may show third-party machine brands (Ryno Worx, Wacker) — illustration only; site brand remains Giammarino.
